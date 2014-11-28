@@ -6,7 +6,8 @@ global Bob
 Bob = "Hi!"
 
 def inpu():
-    while valid == False
+    valid = False
+    while valid == False:
         amount = int(input("Please enter the amount: "))
         conversion = int(input("1.£→$ \n2.£→€ \n3.€→£ \n4.€→$ \n5.$→£ \n6.$→€ \n"))
         valid = validate(conversion)
