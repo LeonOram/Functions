@@ -1,7 +1,6 @@
 #Leon Oram
 #28-11-2014
 #Dev 3
-
 global Bob
 Bob = "Hi!"
 
