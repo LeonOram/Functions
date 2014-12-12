@@ -46,7 +46,7 @@ def cpu_gen():
     elif total_left == 2:
         cpu_remove = 1
     else:
-        print("Shit!")
+        print("GG")
         cpu_remove = 1
     return cpu_remove
 
