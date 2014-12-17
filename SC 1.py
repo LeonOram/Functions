@@ -37,12 +37,16 @@ def input_feet_inches():
     while valid == False:
         feet = int(input("Feet: "))
         inch = int(input("Inches: "))
-        valid = validate_inch(inch)
+        valid = validate_inch(feet,inch)
     return feet,inch
 
-def validate_inch(inch):
-    if inch < 12:
-        valid = True
+def validate_inch(feet,inch):
+    if inch < 12 and inch >= 0:
+        if feet >= 0:
+            valid = True
+        else:
+            print("That is not a valid format. Please try again.")
+            valid = False
     else:
         print("That is not a valid format. Please try again.")
         valid = False
@@ -63,12 +67,16 @@ def input_meters_centimeters():
     while valid == False:
         meters = int(input("Meters: "))
         centi = int(input("Centimeters: "))
-        valid = validate_meter(centi)
+        valid = validate_meter(meter,centi)
     return meters,centi
 
-def validate_meter(centi):
-    if centi < 100:
-        valid = True
+def validate_meter(meter,centi):
+    if centi < 100 and centi >= 0:
+        if meter >= 0:
+            valid = True
+        else:
+            print("That is not a valid format. Please try again.")
+            valid = False
     else:
         print("That is not a valid format. Please try again.")
         valid = False
