@@ -14,15 +14,15 @@ def get_input():
     #words = [[h,e,l,l,o][w,o,r,l,d]]]
     #values = [123,123]
 
-def get_letter(values,word_list):
+def get_letter(word_list):
     letter=[]
-    word_value=[]
+    word_unicode=[]
     for word_num,word in enumerate(word_list):
         for letter_num,letters in enumerate(word):
             letter.append(letters) #e.g [3,4,5,6]
-        word_value.append(convert(letter))
+        word_unicode.append(convert(letter))
         letter=[]
-    print(word_value)
+    return word_value
             
 def convert(letters):
     letters_uni=[]
@@ -32,4 +32,5 @@ def convert(letters):
     
 
 word_list = get_input()
-letter = get_letter(values,word_list)
+word_umicode = get_letter(word_list)
+
