@@ -40,11 +40,11 @@ word_total_value=[]
 for word_number,current_word in enumerate(word_unicode):
     for count in range(0,26):
         for current_letter in current_word:
-            print(current_letter+count)
+            #print(current_letter+count)
             if current_letter + count > 120:
                 current_letter = current_letter - 26
-            print(current_letter+count-97)
+            #print(current_letter+count-97)
             word_total = word_total + values[current_letter+count-97]
-        word_total_value.append(word_total)
-        word_total=0
-        print(word_total_value)
+            word_total_value.append(word_total)
+            Sword_total=0
+    print(word_total_value)
