@@ -23,6 +23,8 @@ def convert_shift(uni_string,shift):
         new = character + shift
         if new > 122:
             new = new - 26
+        elif new < 97:
+            new = new+26
         cypher.append(new)
     return cypher
 
