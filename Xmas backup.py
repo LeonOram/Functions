@@ -20,12 +20,15 @@ def convert_unicode(string):
 def convert_shift(uni_string,shift):
     cypher=[]
     for character in uni_string:
-        new = character + shift
-        if new > 122:
-            new = new - 26
-        elif new < 97:
-            new = new+26
-        cypher.append(new)
+        if character != 0:
+            new = character + shift
+            if new > 122:
+                new = new - 26
+            elif new < 97:
+                new = new+26
+            cypher.append(new)
+        else:
+            cypher.append(0)
     return cypher
 
 def convert_string(string,shift):
